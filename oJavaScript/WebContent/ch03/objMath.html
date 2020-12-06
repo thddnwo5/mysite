@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+         var banner = new Array();
+         
+         for(var i = 0 ; i<7; i++){
+        	 banner[i] = "../images/"+i +".jpg";
+        	 // .. 은 상위폴더를 가르킬때
+        	 // 1.jpg , 2.jpg 가 각각 WebContent:/image 파일에 들어잇기떄문에 이 for문이 발동된다.
+         }
+         
+         var ran = Math.floor(Math.random()*7); // 소숫점이 잇으면 내림으로 나타나게해서
+                                                // 정상적인 정수만 살리기위한 장치
+         document.write("<img src = " + banner[ran]+">");
+         // 랜덤으로 펼쳐준다.
+</script>
+</head>
+<body>
+    <h1>objMath</h1>
+     image와 Math Object를 연계<p>
+</body>
+</html>

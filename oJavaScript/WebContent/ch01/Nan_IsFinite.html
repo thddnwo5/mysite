@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    var number1 = 1/0;
+    var number2 = -1/0;
+    var number3 = 1;
+    var number4 = "1";
+    var number5 = 0/0;
+    //유한수인지 검사
+    console.log(isFinite(number1));
+    console.log(isFinite(number2));
+    console.log(isFinite(number3));
+    console.log(isFinite(number4));
+    
+    //NaN인지 검사
+    // 숫자형인지 검사하는뜻
+    console.log(isNaN(number4));
+    console.log(isNaN(number5));
+    console.log(isNaN(NaN));
+</script>
+</head>
+<body>
+   <h1>NaN     isFinite</h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+      function addNum(x, y, z){
+    	  if(x === undefined) // 함수호출시 x에 해당하는 인수가 전달되지않는경우
+    	      x = 0;
+    	  if(y === undefined) // 함수호출시 y에 해당하는 인수가 전달되지않는경우
+    	      y = 0;
+    	  if(z === undefined) // 함수호출시 z에 해당하는 인수가 전달되지않는경우
+    	      z = 0;
+    	  return x + y + z;
+      }
+      
+      document.write(addNum(1, 2, 3)+"<br>");
+      //매개변수 z에 값을 넣지않아서 모르는값이 들어가잇으므로 NaN이 나온다.
+      document.write(addNum(1, 2)+"<br>");
+      document.write(addNum(1)+"<br>");
+      document.write(addNum()+"<br>");
+</script>
+</head>
+<body>
+    <h1>function04</h1>
+    parameter 전달<p>
+</body>
+</html>

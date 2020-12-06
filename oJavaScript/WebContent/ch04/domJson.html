@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+         // Json
+         var wo = {"name":"진형", "addr":"안산"};
+         // json 객체를 String 객체로 변환
+         alert("JSON.stringify(wo) ->" + JSON.stringify(wo));
+         // parse 메소드는 string 객체를 json 객체로 변환
+         alert("JSON.parse(JSON.stringify(wo)).name -> " + JSON.parse(JSON.stringify(wo)).name);
+         // 밑코드처럼 부를수있다.
+         alert("woo.addr -> " + wo.addr);
+</script>
+</head>
+<body>
+     <h1>dom Json</h1>
+</body>
+</html>

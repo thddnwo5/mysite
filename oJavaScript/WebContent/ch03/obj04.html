@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+       function Dog(color,name,age){
+    	   this.color=color;
+    	   this.name=name;
+    	   this.age=age;
+       }
+       var myDog = new Dog("흰색","마루",1);
+       //color 프로퍼티의 enumerable 속성을 false로 설정함.
+       Object.defineProperty(myDog, 'color' , {enumerable : false});
+       //객체가 가진 고유 프로퍼티 중에서 열거할수 있는 프로퍼티 이름을 배열에 담아 반환함
+       document.write(Object.keys(myDog) + "<br>");
+       // 객체가 가진 모든 고유 프로퍼티의 이름을 배열에 담아 반환함
+       document.write(Object.getOwnPropertyNames(myDog)); // color , name , age
+       // propertyIsEnumerable() 메소드
+       // 특정 프로퍼티가 해당 객체에 존재하고 , 열거할수있는 프로퍼티인지 검사
+       document.write("<p>"+ myDog.propertyIsEnumerable("color") + "<br>");
+       
+       document.write("<p>"+ myDog.propertyIsEnumerable("name") + "<br>");
+       
+       document.write("<p>"+ myDog.propertyIsEnumerable("age") + "<br>");
+       
+       //https://docs.microsoft.com/ko-kr/dotnet/api/system.linq.enumerable?view=net-5.0
+       // enumerable 관련 용어 설명은 윗 http도메인에 나와있다.
+</script>
+</head>
+<body>
+   <h1>obj04</h1>
+   enumerable 예제<p>
+</body>
+</html>

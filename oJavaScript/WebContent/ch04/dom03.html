@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <h1>dom03</h1>
+   <h1>name 속성을 이용한 선택</h1>
+   
+   <p name ="first">첫 번째 단락이에요!</p>
+   <ul>
+       <li name="first">첫번째 아이템이에요.!</li>
+       <li>두번째 아이템이에요.</li>
+       <li>세번쨰 아이템이에요</li>
+       <li>네번째 아이템이에요</li>
+       <li>다섯 번째 아이템이에요</li>
+   </ul>
+   
+    <script type="text/javascript">
+             var selectedItem = document.getElementsByName("first");
+             // 문서 안에서 name에 의한 요소를 가져온다는 의미로 중복이 가능하기떄문에
+             // Element에 s를 붙여준다.
+             for(var i = 0; i< selectedItem.length; i++){
+            	 selectedItem.item(i).style.color="red";
+            	 //선택된 모든요소들의 색상을 빨강색으로 변경
+             }
+    </script>
+</body>
+</html>

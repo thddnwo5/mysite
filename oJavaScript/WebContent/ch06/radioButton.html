@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+        function chk(){
+        	var mStr = "좋아하는 영화는 ?\n";
+        	var sStr = "좋아하는 노래는 ?\n";
+        	
+        	
+        	if(frm.movie.value.length == 0){
+        		alert("영화를 하나라도 선택해주세요...");
+        		frm.movie.focus();
+        		return;
+        	}
+        	if(frm.song.value.length == 0){
+        		alert("노래를 하나라도 선택해주세요...");
+        		frm.song.focus();
+        		return;
+        	}
+        	for(var i = 0; i< frm.movie.value.length; i++){
+        		  if(frm.movie[i].checked){
+        			  mStr += frm.movie[i].value+"\n";
+        			  break;
+        		  }
+        	}
+        	for(var j = 0; j< frm.song.value.length; j++){
+      		  if(frm.song[j].checked){
+      			  sStr += frm.song[j].value+"\n";
+      			  break;
+      		  }
+      		  // for문을 i로 통일해서 해봣는데 안되는거보니 var 특성상 재선언 문제때문에 그런가보다.
+      	}
+        	alert(mStr + sStr);
+        }
+</script>
+</head>
+<body>
+    <h1></h1>
+    <form action="" name="frm">
+           <h2>다음에서 선택하세요.</h2>
+        1. 가장 좋아하는 영화 한 개만 선택하세요. <br>
+        <input type="radio" name="movie" value="원더우먼" id="m1">
+        원더우먼
+        <input type="radio" name="movie" value="악녀" id="m2">
+        <label for="m2">악녀</label>
+        <input type="radio" name="movie" value="쿵푸팬더" id="m3">
+        <label for="m3">쿵푸팬더</label>
+        <hr>
+        2. 좋아하는 노래를 선택하세요.<br>
+        <input type="radio" name="song" value="세월이 가면" id="s1">
+        세월이 가면
+        <input type="radio" name="song" value="미스터미스터리" id="s2">
+        <label for="s2">미스터미스터리</label>
+        <input type="radio" name="song" value="스티커" id="s3">
+        <label for="s3">스티커</label>
+        <input type="radio" name="song" value="신데렐라" id="s4">
+        <label for="s4">신데렐라</label>
+        <input type="button" value="확인" onclick="chk()">
+    </form>
+</body>
+</html>

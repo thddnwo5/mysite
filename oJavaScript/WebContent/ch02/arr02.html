@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+        var arr = ["JavaScript"];
+        var arr3 = new Array();
+        var element = arr[0];
+        
+        arr[1] = 10;
+        arr[2] = element;
+        
+        document.write("배열 arr의 요소에는 ["+ arr +"]가 있습니다. <br>");
+        document.write("배열 arr의 길이는 "+ arr.length +" 입니다. <br>");
+        
+        delete arr[2];
+        
+        document.write("배열 arr의 요소에는 ["+ arr +"]가 있습니다. <br>");
+        document.write("배열 arr의 길이는 "+ arr.length +" 입니다. <br>");
+        
+        arr3[99] = "JavaScript";
+        
+        document.write("<p>배열 arr3의 길이는 "+ arr3.length +" 입니다. <br>");
+        document.write("배열 arr3의 요소에는 ["+ arr3 +"]가 있습니다. <br>");
+</script>
+</head>
+<body>
+   <h1>arr02</h1>
+   배열을 생성하고, 생성된 요소를 추가하고 삭제하는 예제<p>
+</body>
+</html>

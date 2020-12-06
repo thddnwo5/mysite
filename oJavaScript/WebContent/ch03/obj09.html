@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+       var str1 = "abcDEFabc";
+       var str2 = "자바스크립트는 너무 멋져요! 그리고 유용해요.";
+       var str3 = "JavaScript";
+       var str4 = "처음엔 친구였어. 친구 풋풋한 동갑내기 친구";
+       
+       document.write(str1.indexOf('abc',3)+"<p>"); // 6 --> 인덱스 3부터 abc를 찾기시작함
+       document.write(str1.charAt(1)+"<p>");
+       document.write(str1.substring(2,6)+"<p>");
+       document.write(str2.split("!")+"<p>");// 느낌표를 기준으로 나눔
+       document.write(str3.toUpperCase()+"<p>");
+       document.write(str3.toLowerCase()+"<p>");
+       document.write(str4.indexOf('친')+ "<p>"); // 4인이유는 0부터 처음나오는 친이란 글자 위치까지만 알려줌
+                                                 // 이거말고 뒤에서부터 나오는것도 잇다
+</script>
+</head>
+<body>
+    <h1>obj09</h1>
+    String 예제<p>
+</body>
+</html>

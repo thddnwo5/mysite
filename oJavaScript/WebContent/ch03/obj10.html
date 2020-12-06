@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+        var arr = [1, true, "JavaScript"];
+        
+        
+        document.write(arr.length + "<p>"); //3
+        document.write(arr.push("자바스크립트")+ "<p>");
+        document.write(arr.length+ "<p>"); //4
+        document.write(arr+ "<p>");
+        document.write(arr.push(2, "거짒")+ "<p>");
+        document.write(arr.length+ "<p>"); //6 왜냐하면 2, "거짓" 이라는 값을 2개 넣엇으니 
+        document.write(arr+ "<p>");
+        
+        //배열의 마지막요소를 제거 할떄 쓰는 pop
+        document.write(arr.pop() + "<p>");
+        document.write(arr.length+ "<p>");
+        document.write(arr+ "<p>");
+        
+        //배열의 첫요소를 제거 할때 쓰는 shift
+        document.write(arr.shift() + "<p>");
+        document.write(arr.length+ "<p>");
+        document.write(arr+ "<p>");
+        
+        //하나 이상의 요소를 배열의 가장 앞에 추가
+        
+        document.write(arr.unshift('자바스크립트') + "<p>");
+        document.write(arr.length+ "<p>");
+        document.write(arr+ "<p>");
+        
+        // pop이나 shift가 좋은점이 다른 삭제방법(delete)은 삭제해도 그값이 존재햇던 공간은 남아있어서 length에 남는데
+        // pop shift같은것들은 그공간도 삭제
+        // "arr('자바스크립트')" good code
+        // "arr("자바스크립트")" bad code
+</script>
+</head>
+<body>
+    <h1>obj10</h1>
+    Array 예제 <p>
+</body>
+</html>

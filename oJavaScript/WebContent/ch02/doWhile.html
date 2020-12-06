@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+        var i = 1, j = 1;
+        
+        while(i > 3){ //변수 i의 초깃값은 1이기떄문에 while 문은 한번도 실행되지 않음
+        	document.write("i : " + (i++) + "<br>");
+        }
+        do{ // 변수 j의 초깃값은 1이기때문에 do/while문은 단 한번만 실행됨
+        	document.write("j : "  + (j++) + "<br>");
+        }while(j > 3);
+        
+        // dowhile문 자체가 한번은 무조껀 실행한다는 조건이 잇기때문에
+        // 결국에는 dowhile문이 잘쓰일것같다 (왜냐하면 한번이라도 실행되기때문에 문제가 어디서 발생햇는지 추측가능)
+</script>
+</head>
+<body>
+    <h1>DoWhile</h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+         function chk(){
+        	 var mStr= "좋아하는 영화는\n";
+        	  alert(frm.movie.length);  // 5 맞음 체크용으로 만듬
+             //근데 다중선택이 안됨 multiple이 문제가 잇는것같은데...
+             // select 다중선택은 컨트롤+ 마우스왼클릭으로 밖에 안된다.
+             // 클릭만으로 하고싶으면 운영체제를 건들여야한다니깐 어쩔수없는거다 ...
+        	 for(var i = 0; i<frm.movie.length; i++){
+        	   if(frm.movie[i].selected){
+        		 mStr += frm.movie[i].value +"\n";
+        	   }
+        	 }
+        	 alert(mStr); 
+        	 
+        	
+         }
+</script>
+</head>
+<body>
+    <h2>좋아하는 영화는</h2>
+    <form action="" name="frm">
+              <!-- size 은 3개까지만 보이게끔 만듬 -->
+          <select name="movie" multiple="multiple" size="3">  
+               <option value="배트맨">배트맨</option>
+               <option value="스파더">스파더</option>
+               <option value="슈퍼맨" selected="selected">슈퍼맨</option>
+               <option value="호빵맨">호빵맨</option>
+               <option value="그린맨">그린맨</option>
+          </select><p>
+         <input type="button" value="확인" onclick="chk()">
+    </form>
+</body>
+</html>

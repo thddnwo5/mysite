@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+        
+        function chk(){
+        	var str = "좋아하는 영화는 ?\n";
+        	alert(frm.movie.length); // movie가 3개이므로 legnth는 3개
+        	for(var i = 0; i<frm.movie.length; i++){
+        		 if(frm.movie[i].checked) str += frm.movie[i].value + "\n";
+        	}
+        	alert(str);
+        }
+</script>
+</head>
+<body>
+     <h1>checkBox</h1>
+     
+     <form action="" name="frm">
+           <label for="m1">이웃사촌</label>
+           <input type="checkBox" name="movie" id="m1" value="이웃사촌">
+           <label for="m1">더프롬</label>
+           <input type="checkBox" name="movie" id="m2" value="더프롬">
+           <label for="m1">도굴</label>
+           <input type="checkBox" name="movie" id="m3" value="도굴">
+           <input type="button" value="확인" onclick="chk()">
+     </form>
+</body>
+</html>
