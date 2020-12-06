@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+        function chk(){
+        	 var checking = frm.movie;
+       
+        	
+            for(var i=0; i<checking.length; i++){
+            	if(checking[i].checked){
+            		alert('frm.movie[i].checked-->'+checking[i].checked);
+            		// checked 타입은 boolean타입
+            		return true;
+            	}
+           
+            }
+            
+            alert('하나라도 선택해주세요.');
+        	return false;
+        	//return 위치가 바뀐이유는 checked 타입이 boolean타입이여서 
+        	// checked햇는데 0개면 false니깐 
+        }
+</script>
+</head>
+<body>
+   <h1>좋아하는 영화를 모두 선택하세요.</h1>
+   <form action="Movie" method="post" name="frm" onsubmit="return chk()">
+           베트맨<input type="checkbox" name="movie" value="배트맨"><p>
+           슈퍼맨<input type="checkbox" name="movie" value="슈퍼맨"><p>
+           호빵맨<input type="checkbox" name="movie" value="호빵맨"><p>
+           아이언맨<input type="checkbox" name="movie" value="아이언맨"><p>
+           스파이더맨<input type="checkbox" name="movie" value="스파이더맨"><p>
+           <input type="submit" value="체크완료">
+   </form>
+</body>
+</html>

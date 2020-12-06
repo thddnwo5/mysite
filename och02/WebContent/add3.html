@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+       function chk(){
+    	   if(frm.num.value.length==0){
+                alert('입력을 해주세요.');
+                frm.num.focus();
+                return false;
+    	  }else if(isNaN(frm.num.value)){
+   		   alert('그게 숫자니?');
+		   frm.num.focus();
+		   frm.num.value=""; //입력된 글자 지우기를 간단하게 표현
+		   return false;
+	     }
+    	   return true;
+       }
+        
+</script>
+</head>
+<body>
+     <h1>숫자를 입력하세요.</h1>
+     <form action="Add3" name="frm" onsubmit="return chk()" autocomplete="off">
+           숫자 : <input type="text" name="num"><p>
+                 <input type="submit" value="확인">           
+     </form>
+</body>
+</html>
