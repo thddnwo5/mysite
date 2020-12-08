@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+      function chk(){
+    	  if(!frm.name.value){
+    		  alert('이름을 입력해주세요.');
+    		  frm.name.focus();
+    		  return false;
+    	  }
+    	  return true;
+      }
+       window.onload = function(){
+    	   frm.name.value="홍길동";
+    	   frm.name.focus();
+       } // 초기값을 주고싶을때 하는 코드
+</script>
+</head>
+<body>
+     
+    <h2>이름을 입력해주세요.</h2>
+    <form action="Greet" name="frm" method="get" onsubmit="return chk()" autocomplete="off">
+    <!-- <form action="greet.jsp" name="frm" method="get" onsubmit="return chk()" autocomplete="off"> -->
+        이름 : <input type="text" name="name"><p>
+        <input type="submit" value="확인">
+    </form>
+</body>
+</html>
