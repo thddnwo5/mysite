@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+       function chk(){
+    	   var num1 = document.getElementById("num1");
+    	   var num2 = document.getElementById("num2");
+    	   
+    	   if(!num1.value){
+    		   alert('첫번쨰 수?');
+    		   num1.focus();
+    		   return false;
+    	   }
+    	   if(isNaN(num1.value)){
+    		   alert('첫번째 숫자');
+    		   num1.focus();
+    		   return false;
+    	   }
+    	   
+    	   if(!num2.value){
+    		   alert('첫번쨰 수?');
+    		   num2.focus();
+    		   return false;
+    	   }
+    	   if(isNaN(num2.value)){
+    		   alert('첫번째 숫자');
+    		   num2.focus();
+    		   return false;
+    	   }
+    	   return true;
+       }
+
+</script>
+</head>
+<body>
+    <h2>두수를 입력하세요</h2>
+    <!-- <form action="cal2.jsp" onsubmit="return chk()" autocomplete="off"> -->
+    <form action="cal.jsp" onsubmit="return chk()" autocomplete="off">
+        첫번째 수 : <input type="text" name="num1" id="num1"><p>
+        두번째 수 : <input type="text" name="num2" id="num2"><p>
+        <input type="submit" value="확인">
+    </form>
+</body>
+</html>
