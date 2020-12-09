@@ -1,9 +1,8 @@
 
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.GregorianCalendar;
+import java.math.BigInteger;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -13,47 +12,43 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/Greet")
-public class Greet extends HttpServlet {
+@WebServlet("/Fibonazzi")
+public class Fibonazzi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    PrintWriter    log;
+    BigInteger[] arr = new BigInteger[100];
     
-    public Greet() {
+    public Fibonazzi() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 	
 	public void init(ServletConfig config) throws ServletException {
-		try {
-			log = new PrintWriter(new FileWriter("C:/log/logtest.txt",true));
-		} catch (IOException e) {
-			
-			e.printStackTrace();
+		arr[0] = new BigInteger("1");
+		arr[1] = new BigInteger("1");
+		
+		for(int i=2; i < arr.length; i++) {
+			arr[i] = arr[i-2].add(arr[i-1]);
+			// 첫번째의 인덱스와 두번째 인덱스를 더해서 arr[i]로 넣는다.
+			// 기본적인 파보나치 수열 코딩방식
+			// arr[i-2] + arr[i-1] 과 똑같은 코드
 		}
 	}
 
 	
-	
-
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		String name = request.getParameter("name");
-		String msg = name + "님 반가워\r\n";
-		GregorianCalendar gc = new GregorianCalendar();
-		// TF => 날짜 , TT => 시간
-		String date = String.format("%TF %TT\r\n", gc,gc);
-		//System.out.println("GregorianCalendar --> " + date);
-		// 위 코드때문에 txt파일에 저장이 되지않는다.
-		log.print(date + msg);
+		int num = Integer.parseInt(request.getParameter("num"));
+		
+		if(num > 100) num = 100;
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
+		out.println("<html><body><h2>파보나찌 수열</h2>");
 		
-		out.println("<html><body><h2>인사</h2>"+msg);
-		out.println("</body></html>");
-		out.close();
+	     for(int i =0; i < num; i++) {
+	    	 out.println(arr[i] + "<br>");
+	     }
+	     out.println("</body></html>");
+	     out.close();
 	}
 
 	
@@ -62,7 +57,4 @@ public class Greet extends HttpServlet {
 		doGet(request, response);
 	}
 
-	public void destroy() {
-		if (log != null) log.close();
-	}
 }
